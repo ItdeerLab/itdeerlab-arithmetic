@@ -161,5 +161,34 @@ public class ArrayData {
         return array;
     }
 
+    /**
+     * 检测是否有序
+     *
+     * @param array 要检测的数组
+     * @return 检测结果
+     */
+    public static boolean checkArray(int[] array) {
+        int n = array.length - 1;
+
+        for (int i = 0; i < n; i++) {
+            if (array[i] > array[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * copy一个整型数组
+     *
+     * @param array 需要Copy的数组
+     * @return 新的一样的数组
+     */
+    public static int[] copyArray(int[] array) {
+        int[] newArray = array.clone();
+        return newArray;
+    }
+
 
 }
